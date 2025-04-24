@@ -1,0 +1,17 @@
+otlp:
+  endpoint: "http://collector:4318"
+  flush_interval: 60s  # Send profiles every minute
+
+profiler:
+  cpu:
+    enabled: true
+    sampling_interval: 10ms  # 10ms sampling interval for CPU
+    duration: 30s            # Profile for 30 seconds every minute
+    
+  heap:
+    enabled: true
+    sampling_interval: 512KB  # Sample every 512KB allocation
+    
+system:
+  resource_attributes:
+    service.name: "nr-profiler-agent"

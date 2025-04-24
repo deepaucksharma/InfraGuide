@@ -1,0 +1,24 @@
+﻿[22-04-25 03:07:57] info: Program: Starting Squirrel Updater: --updateSelf=C:\Users\hi\AppData\Local\SquirrelTemp\Update.exe
+[22-04-25 03:07:57] info: Program: About to wait for parent PID 17452
+[22-04-25 03:07:59] fatal: Finished with unhandled exception: System.AggregateException: One or more errors occurred. ---> System.IO.IOException: The process cannot access the file 'C:\Users\hi\AppData\Local\AnthropicClaude\app-0.9.2\..\Update.exe' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Update.Program.<UpdateSelf>d__6.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at Squirrel.Update.Program.executeCommandLine(String[] args)
+   at Squirrel.Update.Program.main(String[] args)
+---> (Inner Exception #0) System.IO.IOException: The process cannot access the file 'C:\Users\hi\AppData\Local\AnthropicClaude\app-0.9.2\..\Update.exe' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Update.Program.<UpdateSelf>d__6.MoveNext()<---
+

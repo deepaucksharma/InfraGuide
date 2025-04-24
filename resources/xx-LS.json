@@ -1,0 +1,672 @@
+{
+  "+/cwsayrqk": [
+    {
+      "type": 0,
+      "value": "Actual SizeSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "+7sd9hoyZA": [
+    {
+      "type": 0,
+      "value": "CopySSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "/PgA81GVOD": [
+    {
+      "type": 0,
+      "value": "EditSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "/bRGKhnXQ6": [
+    {
+      "type": 0,
+      "value": "A new version is available. It will be downloaded and installed automatically.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "0g8/VVdNuN": [
+    {
+      "type": 0,
+      "value": "Go to claude.ai/settings to configure your profile, team, and more.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "0tZLEYF8mJ": [
+    {
+      "type": 0,
+      "value": "DeveloperSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "1HUTYwndT2": [
+    {
+      "type": 0,
+      "value": "WindowSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "1PfZLi/OV7": [
+    {
+      "type": 0,
+      "value": "GeneralSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "1TJUzU26sO": [
+    {
+      "type": 0,
+      "value": "Submit Feedback…SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "25aCMlTDUq": [
+    {
+      "type": 0,
+      "value": "Automatically start Claude when you log inSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "3ML3xT+gEV": [
+    {
+      "type": 0,
+      "value": "RedoSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "3gG1j3kRBX": [
+    {
+      "type": 0,
+      "value": "Submit Feedback...SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "3unrKzH4zB": [
+    {
+      "type": 0,
+      "value": "CopySSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "4qP7MjrQfC": [
+    {
+      "type": 0,
+      "value": "Environment variablesSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "5DUIVR3fVi": [
+    {
+      "type": 0,
+      "value": "About...SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "6yv8ytK4El": [
+    {
+      "type": 0,
+      "value": "Check your network connectionSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "7fdcqxofEs": [
+    {
+      "type": 0,
+      "value": "ExitSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "7gSC+rZzXX": [
+    {
+      "type": 0,
+      "value": "Quickly open Claude from anywhereSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "8YQEOfuaGO": [
+    {
+      "type": 0,
+      "value": "Select AllSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "9+afSO9e/t": [
+    {
+      "type": 0,
+      "value": "Failed to check for updates: "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    },
+    {
+      "type": 0,
+      "value": "SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "9uNxNtcrFI": [
+    {
+      "type": 0,
+      "value": "InstallSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "CZwl8X2D85": [
+    {
+      "type": 0,
+      "value": "Advanced optionsSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "CizRPROPWo": [
+    {
+      "type": 0,
+      "value": "Claude HelpSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "D43DeqP+2t": [
+    {
+      "type": 0,
+      "value": "Claude SettingsSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "D4DyT6MmPy": [
+    {
+      "type": 0,
+      "value": "Could not load app settingsSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "DQTgg21B7g": [
+    {
+      "type": 0,
+      "value": "Show AppSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "E9jYTa7AbX": [
+    {
+      "type": 0,
+      "value": "System TraySSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "EfdnINFnIz": [
+    {
+      "type": 0,
+      "value": "FileSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "GSG5S0ysrR": [
+    {
+      "type": 0,
+      "value": "Run on StartupSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "HeHYq6bbS2": [
+    {
+      "type": 0,
+      "value": "Claude can receive information like prompts and attachments from specialized servers using Model Context Protocol.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "I5O68ogAtr": [
+    {
+      "type": 0,
+      "value": "Get StartedSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "JVwNvMZjVT": [
+    {
+      "type": 0,
+      "value": "PasteSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "KAo3lt5Hv+": [
+    {
+      "type": 0,
+      "value": "PasteSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "Ko/2Ml7mZG": [
+    {
+      "type": 0,
+      "value": "Reload This PageSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "L32WRR6NOL": [
+    {
+      "type": 0,
+      "value": "DeleteSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "L717supPIA": [
+    {
+      "type": 0,
+      "value": "SettingsSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "LCWUQ/4Fu6": [
+    {
+      "type": 0,
+      "value": "ViewSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "NZIwKxgxJ+": [
+    {
+      "type": 0,
+      "value": "Are you sure you want to remove the MCP server \""
+    },
+    {
+      "type": 1,
+      "value": "serverKey"
+    },
+    {
+      "type": 0,
+      "value": "\"?SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "Nmvo1ufAY5": [
+    {
+      "type": 0,
+      "value": "Couldn't connect to ClaudeSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "O3rtEd7aMd": [
+    {
+      "type": 0,
+      "value": "FindSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "ODySlGptaj": [
+    {
+      "type": 0,
+      "value": "Settings…SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "PH29MShDiy": [
+    {
+      "type": 0,
+      "value": "ForwardSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "PW5U8NgTto": [
+    {
+      "type": 0,
+      "value": "Open MCP Log File...SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "PZtcoAOSsa": [
+    {
+      "type": 0,
+      "value": "Don't EnableSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "PbJ4jR0kv1": [
+    {
+      "type": 0,
+      "value": "You are running the latest version.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "RTg057HE1D": [
+    {
+      "type": 0,
+      "value": "Show Dev ToolsSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "S3MXlbjkax": [
+    {
+      "type": 0,
+      "value": "What can I help you with today?SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "S3k5yXss2r": [
+    {
+      "type": 0,
+      "value": "Version "
+    },
+    {
+      "type": 1,
+      "value": "version"
+    },
+    {
+      "type": 0,
+      "value": "SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "TH+W2Ad73P": [
+    {
+      "type": 0,
+      "value": "CutSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "UJCjEVPX6Q": [
+    {
+      "type": 0,
+      "value": "Look UpSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "Vvus2ifAny": [
+    {
+      "type": 0,
+      "value": "Edit ConfigSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "W1pELwt/+a": [
+    {
+      "type": 0,
+      "value": "Claude runs in the Notification AreaSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "WBvq3HlPae": [
+    {
+      "type": 0,
+      "value": "Set shortcutSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "WF1HSu0jAC": [
+    {
+      "type": 0,
+      "value": "Open Logs FolderSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "WZe86KSdrM": [
+    {
+      "type": 0,
+      "value": "Add to dictionarySSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "WlhIx7DfFO": [
+    {
+      "type": 0,
+      "value": "OKSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "XPIoFTkh3e": [
+    {
+      "type": 0,
+      "value": "No Update AvailableSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "XZ36+EBE5/": [
+    {
+      "type": 0,
+      "value": "Zoom OutSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "XinCguXCgN": [
+    {
+      "type": 0,
+      "value": "Learn moreSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "YTdYCYAf/Z": [
+    {
+      "type": 0,
+      "value": "Show Claude in the menu barSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "Z9g5m/V9Nq": [
+    {
+      "type": 0,
+      "value": "Zoom InSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "ZJZN1+KyJw": [
+    {
+      "type": 0,
+      "value": "Settings...SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "aNmxuDcWaU": [
+    {
+      "type": 0,
+      "value": "ErrorSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "aXdFLiVzjd": [
+    {
+      "type": 0,
+      "value": "Show Main WindowSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "arbRxbtBkP": [
+    {
+      "type": 0,
+      "value": "BackSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "baGq3gy8z1": [
+    {
+      "type": 0,
+      "value": "New ConversationSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "dKX0bpR+a2": [
+    {
+      "type": 0,
+      "value": "QuitSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "dLyz0Srosd": [
+    {
+      "type": 0,
+      "value": "DeveloperSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "fEeEFfSz4K": [
+    {
+      "type": 0,
+      "value": "Zoom In (indie cooler version)SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "fFJxOwJRj2": [
+    {
+      "type": 0,
+      "value": "UndoSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "fWDSQQgRO5": [
+    {
+      "type": 0,
+      "value": "Menu BarSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "iFRmqBsr1N": [
+    {
+      "type": 0,
+      "value": "About ClaudeSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "ilE9e0uxNN": [
+    {
+      "type": 0,
+      "value": "RefreshSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "j66cdL4EK5": [
+    {
+      "type": 0,
+      "value": "Open DocumentationSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "jd5ZNrRMNP": [
+    {
+      "type": 0,
+      "value": "You're an early explorer, so let us know your feedback.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "k+06oXbIas": [
+    {
+      "type": 0,
+      "value": "Show Claude in the notifications areaSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "kYwW0OsI4M": [
+    {
+      "type": 0,
+      "value": "Claude Desktop is in beta.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "m3GfpKD1WX": [
+    {
+      "type": 0,
+      "value": "ReloadSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "mRXjxhS6p4": [
+    {
+      "type": 0,
+      "value": "Check for Updates…SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "ngLpGT7bUJ": [
+    {
+      "type": 0,
+      "value": "Could not load developer settingsSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "oQuOiX24pp": [
+    {
+      "type": 0,
+      "value": "QuitSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "pWXxZASpOB": [
+    {
+      "type": 0,
+      "value": "HelpSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "pgaCSv2/6H": [
+    {
+      "type": 0,
+      "value": "ArgumentsSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "q4hs14B00V": [
+    {
+      "type": 0,
+      "value": "Unknown errorSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "rNAd+HxSK4": [
+    {
+      "type": 0,
+      "value": "Open MCP Log FileSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "rY99UXvTDU": [
+    {
+      "type": 0,
+      "value": "Copy ImageSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "rdiPpQVqvY": [
+    {
+      "type": 0,
+      "value": "Developer mode allows access to developer tools and debugging features. Only enable this if you know what you're doing.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "rwFEudHXey": [
+    {
+      "type": 0,
+      "value": "There was an error reading or parsing claude_desktop_config.json: "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    },
+    {
+      "type": 0,
+      "value": "SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "sNnRQsIEYz": [
+    {
+      "type": 0,
+      "value": "Find in pageSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "sZxWXq9BzJ": [
+    {
+      "type": 0,
+      "value": "Give feedbackSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "sys7RHphmL": [
+    {
+      "type": 0,
+      "value": "FeedbackSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "tWutslc/9Z": [
+    {
+      "type": 0,
+      "value": "EnableSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "u1/hT7oRQY": [
+    {
+      "type": 0,
+      "value": "Quick Entry Keyboard ShortcutSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "uc3dnSo+eo": [
+    {
+      "type": 0,
+      "value": "FileSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "urCd4k/cE0": [
+    {
+      "type": 0,
+      "value": "CommandSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "vgLHPxjh9O": [
+    {
+      "type": 0,
+      "value": "Enable Developer ModeSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "wS64bVG2CO": [
+    {
+      "type": 0,
+      "value": "MCP is a protocol that enables secure connections between clients, such as the Claude Desktop app, and local services.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "xJs1jZ8PoA": [
+    {
+      "type": 0,
+      "value": "Claude runs in the background even when you close the window. Click the Claude icon in the tray to reopen the app, or right-click to quit.SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "xKRKzVVy9c": [
+    {
+      "type": 0,
+      "value": "ConfigureSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "xd436TVDRZ": [
+    {
+      "type": 0,
+      "value": "There was an error reading or parsing developer_settings.json: "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    },
+    {
+      "type": 0,
+      "value": "SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "y9tCbmRzHN": [
+    {
+      "type": 0,
+      "value": "Enable Developer Mode?SSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "ytjMRobdyL": [
+    {
+      "type": 0,
+      "value": "Update AvailableSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "zAYm/Z684h": [
+    {
+      "type": 0,
+      "value": "HelpSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "zCIK9K8J4a": [
+    {
+      "type": 0,
+      "value": "ErrorSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ],
+  "zSP70MVzIo": [
+    {
+      "type": 0,
+      "value": "Clear shortcutSSSSSSSSSSSSSSSSSSSSSSSSS"
+    }
+  ]
+}

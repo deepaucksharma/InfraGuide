@@ -1,0 +1,68 @@
+FROM golang:1.21-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Install build dependencies
+RUN apk add --no-cache git gcc musl-dev
+
+# Copy go module files
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Copy source code
+COPY . .
+
+# Build WASM module (placeholder - in a real implementation this would use wasip1 target)
+RUN mkdir -p plugins && \
+    touch plugins/pii_masker.wasm
+
+# Build plugins and collector
+RUN mkdir -p bin && \
+    go build -o bin/cardinality_limiter.so ./src/plugins/cardinality_limiter/*.go && \
+    go build -o bin/adaptive_priority_queue.so ./src/plugins/adaptive_priority_queue/*.go && \
+    go build -o bin/enhanced_dlq.so ./src/plugins/enhanced_dlq/*.go && \
+    go build -o bin/adaptive_degradation_manager.so ./src/plugins/adaptive_degradation_manager/*.go && \
+    go build -o bin/collector ./cmd/collector
+
+# Final stage
+FROM alpine:3.19
+
+# Install runtime dependencies
+RUN apk --no-cache add ca-certificates libstdc++ tzdata zstd
+
+# Install Wasmtime
+RUN wget -qO- https://github.com/bytecodealliance/wasmtime/releases/download/v14.0.0/wasmtime-v14.0.0-x86_64-linux.tar.xz | tar -xJf - -C /usr/local && \
+    ln -s /usr/local/wasmtime-v14.0.0-x86_64-linux/wasmtime /usr/local/bin/wasmtime
+
+# Create necessary directories
+RUN mkdir -p /etc/otel /var/lib/otel/dlq /plugins
+
+# Copy binary from builder stage
+COPY --from=builder /app/bin/collector /bin/collector
+COPY --from=builder /app/bin/*.so /plugins/
+COPY --from=builder /app/plugins/pii_masker.wasm /plugins/
+
+# Create non-root user
+RUN addgroup -g 10001 otel && \
+    adduser -D -g '' -u 10001 -G otel otel && \
+    chown -R otel:otel /var/lib/otel
+
+# Set proper permissions
+RUN chmod 755 /bin/collector && \
+    chmod 755 /plugins/*.so && \
+    chmod 644 /plugins/*.wasm && \
+    chmod -R 775 /var/lib/otel/dlq
+
+# Switch to non-root user
+USER otel
+
+# Expose OTLP receiver and Prometheus metrics
+EXPOSE 4318 8888
+
+# Default environment variables
+ENV MEMORY_BALLAST_SIZE_MIB=64
+
+# Command to run
+ENTRYPOINT ["/bin/collector"]
+CMD ["--config", "/etc/otel/config.yaml"]

@@ -1,0 +1,158 @@
+version: '3.8'
+
+services:
+  # OpenTelemetry Collector with custom plugins
+  collector:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.collector
+    ports:
+      - "4318:4318"  # OTLP HTTP
+      - "8888:8888"  # Metrics endpoint
+    volumes:
+      - ./otel-config/collector.yaml:/etc/otel/config.yaml
+      - ./data/dlq:/var/lib/nrdotplus/dlq
+      - ./plugins:/plugins
+    environment:
+      - MEMORY_BALLAST_SIZE_MIB=64
+      - NEW_RELIC_ENDPOINT=${NEW_RELIC_ENDPOINT:-http://nr-ingest:4317}
+      - NEW_RELIC_API_KEY=${NEW_RELIC_API_KEY:-}
+    depends_on:
+      - mock-service
+      - nr-ingest
+    restart: unless-stopped
+
+  # Mock upstream service (simulates backend service)
+  mock-service:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mock
+    ports:
+      - "8080:8080"  # HTTP API
+      - "8081:8081"  # Metrics
+    environment:
+      - PORT=8080
+      - METRICS_PORT=8081
+      - LATENCY_MIN=10
+      - LATENCY_MAX=50
+      - ERROR_RATE=0
+      - SUPPORT_OUTAGE_SIMULATION=true
+    restart: unless-stopped
+
+  # NR Ingest mock service
+  nr-ingest:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.ingest
+    ports:
+      - "4317:4317"  # OTLP HTTP
+      - "8889:8889"  # Metrics
+    environment:
+      - PORT=4317
+      - METRICS_PORT=8889
+      - VERBOSE_LOGGING=true
+    restart: unless-stopped
+
+  # eBPF integration agent
+  nr-ebpf-integration:
+    image: ${EBPF_IMAGE:-busybox}
+    command: ["sh", "-c", "echo 'eBPF integration agent placeholder' && sleep infinity"]
+    volumes:
+      - ./otel-config/nr-ebpf.yaml:/etc/nr-ebpf.yaml
+    cap_add:
+      - SYS_ADMIN
+      - SYS_RESOURCE
+      - SYS_PTRACE
+    security_opt:
+      - apparmor:unconfined
+    depends_on:
+      - collector
+    restart: unless-stopped
+    profiles: ["agents"]
+
+  # Profiler integration agent
+  nr-profiler-integration:
+    image: ${PROFILER_IMAGE:-busybox}
+    command: ["sh", "-c", "echo 'Profiler integration agent placeholder' && sleep infinity"]
+    volumes:
+      - ./otel-config/nr-profiler.yaml:/etc/nr-profiler.yaml
+    cap_add:
+      - SYS_ADMIN
+      - SYS_PTRACE
+    security_opt:
+      - apparmor:unconfined
+    depends_on:
+      - collector
+    restart: unless-stopped
+    profiles: ["agents"]
+
+  # Workload generator
+  workload-generator:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.generator
+    volumes:
+      - ./src/testing/workload_generator/profiles:/profiles
+    environment:
+      - TARGET_URL=http://collector:4318
+      - WORKERS=10
+      - RATE_LIMIT=1000
+      - DURATION=300
+    depends_on:
+      - collector
+    profiles: ["test"]
+
+  # Outage simulator
+  outage-simulator:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.simulator
+    volumes:
+      - ./data/dlq:/var/lib/nrdotplus/dlq
+    environment:
+      - TARGET_SERVICE=mock-service
+      - TARGET_URL=http://mock-service:8080/outage
+      - OUTAGE_DURATION=300
+      - OUTAGE_TYPE=api
+    depends_on:
+      - mock-service
+      - collector
+    profiles: ["test"]
+
+  # Prometheus for metrics collection
+  prometheus:
+    image: prom/prometheus:v2.45.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./data/prometheus:/prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --web.console.libraries=/etc/prometheus/console_libraries
+      - --web.console.templates=/etc/prometheus/consoles
+    depends_on:
+      - collector
+      - mock-service
+      - nr-ingest
+    restart: unless-stopped
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:10.2.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards
+      - ./data/grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  dlq-data:

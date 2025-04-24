@@ -1,0 +1,14 @@
+otlp:
+  endpoint: "http://collector:4318"
+  flush_interval: 2s
+
+capture:
+  process_exec: true
+  network_flows: true
+
+ebpf:
+  ring_buffer_size: 8MiB
+
+fallback:
+  enable_procfs: true
+  procfs_interval: 5s

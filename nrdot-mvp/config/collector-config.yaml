@@ -1,0 +1,158 @@
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: "0.0.0.0:4318"
+        max_request_body_size: 4000000      # 4 MB
+
+processors:
+  resourcedetection: {}
+  
+  transform:
+    metric_statements:
+      - context: resource
+        statements:
+          - set(attributes["telemetry.source"], "ebpf") where resource.attributes["service.name"] == "nr-ebpf-agent"
+  
+  cardinality_limiter:
+    max_unique_keysets: 500000
+    algorithm: "entropy"
+    action: "drop_aggregate"
+    aggregation_dimensions: ["service.name", "host.name", "container.image.tag", "k8s.pod.uid"]
+    metrics_only: true
+  
+  adaptiveDegradationManager:
+    triggers:
+      memory_utilization_high: 75
+      queue_utilization_high: 70
+    levels:
+      - id: 1
+        actions: ["inc_batch", "stretch_scrape"]
+      - id: 2
+        actions: ["enable_sampling"]
+  
+  wasm:
+    modules:
+      - name: pii_masker
+        path: /plugins/pii_masker.wasm
+        timeout_ms: 3
+        memory_limit_mb: 8
+  
+  memory_limiter:
+    check_interval: 1s
+    limit_percentage: 80
+    spike_limit_percentage: 25
+    ballast_size_mib: ${env:MEMORY_BALLAST_SIZE_MIB:64}
+  
+  batch:
+    send_batch_size: 2000
+    timeout: 10s
+  
+  adaptive_priority_queue:
+    priorities:
+      critical: 5
+      high: 3
+      normal: 1
+    max_queue_size: 2000
+    queue_full_threshold: 95
+    overflow_strategy: "dlq"
+    circuit_breaker_enabled: true
+    circuit_breaker_error_threshold: 30
+    circuit_breaker_reset_timeout: 60
+
+exporters:
+  otlphttp/nr:
+    endpoint: "http://nr-ingest:4317"
+    compression: "zstd"
+    sending_queue:
+      enabled: true
+      queue_size: 2000
+      priority:
+        enabled: true
+        classes:
+          - name: critical
+            weight: 5
+            pattern: 'metric.name =~ "^system\\."'
+          - name: high
+            weight: 3
+            pattern: 'resource.attributes["telemetry.source"] == "ebpf"'
+          - name: normal
+            weight: 1
+            pattern: '.*'
+    persistent_queue:
+      enabled: true
+      directory: /var/lib/otel/dlq
+      capacity: 15000000000  # 15 GiB
+    retry_on_failure:
+      enabled: true
+      initial_interval: 5s
+      max_interval: 30s
+      max_elapsed_time: 300s
+  
+  otlphttp/upstream:
+    endpoint: "http://mock-upstream:8080"
+    tls:
+      insecure: true
+    compression: "zstd"
+    sending_queue:
+      enabled: true
+      queue_size: 2000
+      priority:
+        enabled: true
+        classes:
+          - name: critical
+            weight: 5
+            pattern: 'metric.name =~ "^system\\."'
+          - name: high
+            weight: 3
+            pattern: 'resource.attributes["telemetry.source"] == "ebpf"'
+          - name: normal
+            weight: 1
+            pattern: '.*'
+    persistent_queue:
+      enabled: true
+      directory: /var/lib/otel/dlq
+      capacity: 15000000000  # 15 GiB
+    retry_on_failure:
+      enabled: true
+      initial_interval: 5s
+      max_interval: 30s
+      max_elapsed_time: 300s
+
+  enhanced_dlq:
+    directory: /var/lib/otel/dlq
+    file_size_limit_mib: 128
+    verify_sha256: true
+    replay_rate_mib_sec: 4
+    interleave_ratio: 1
+    retention_hours: 72
+    file_prefix: "otel-dlq"
+    replay_on_start: false
+    replay_concurrency: 1
+
+  prometheus:
+    endpoint: 0.0.0.0:8888
+    namespace: nrdot_mvp
+
+service:
+  extensions: []
+  
+  pipelines:
+    metrics:
+      receivers: [otlp]
+      processors: [resourcedetection, transform, cardinality_limiter, adaptiveDegradationManager, wasm, memory_limiter, batch, adaptive_priority_queue]
+      exporters: [otlphttp/nr, otlphttp/upstream, enhanced_dlq, prometheus]
+    
+    traces:
+      receivers: [otlp]
+      processors: [resourcedetection, transform, adaptiveDegradationManager, wasm, memory_limiter, batch, adaptive_priority_queue]
+      exporters: [otlphttp/nr, otlphttp/upstream, enhanced_dlq]
+    
+    logs:
+      receivers: [otlp]
+      processors: [resourcedetection, transform, adaptiveDegradationManager, wasm, memory_limiter, batch, adaptive_priority_queue]
+      exporters: [otlphttp/nr, otlphttp/upstream, enhanced_dlq]
+
+  telemetry:
+    metrics:
+      address: 0.0.0.0:8888

@@ -1,0 +1,23 @@
+{
+  "target_url": "http://localhost:4318",
+  "workers": 10,
+  "rate_limit": 1000,
+  "duration": 300,
+  "send_metrics": true,
+  "send_traces": true,
+  "send_logs": true,
+  "unique_services": 10,
+  "unique_hosts": 100,
+  "unique_instances": 1000,
+  "unique_metrics": 100,
+  "unique_traces": 50,
+  "unique_logs": 20,
+  "dimensions_per_metric": 5,
+  "critical_percent": 10,
+  "high_percent": 20,
+  "cardinality_spike": false,
+  "random_spike_time": true,
+  "spike_time": 60,
+  "spike_duration": 30,
+  "spike_factor": 10
+}

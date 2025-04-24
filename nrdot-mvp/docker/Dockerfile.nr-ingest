@@ -1,0 +1,46 @@
+FROM golang:1.21-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Install build dependencies
+RUN apk add --no-cache git gcc musl-dev
+
+# Copy go module files
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Copy source code
+COPY . .
+
+# Build the New Relic ingest mock
+RUN go build -o /bin/nr-ingest ./cmd/nr-ingest
+
+# Final stage
+FROM alpine:3.19
+
+# Install runtime dependencies
+RUN apk --no-cache add ca-certificates tzdata
+
+# Copy binary from builder stage
+COPY --from=builder /bin/nr-ingest /bin/nr-ingest
+
+# Create non-root user
+RUN addgroup -g 10004 ingest && \
+    adduser -D -g '' -u 10004 -G ingest ingest
+
+# Set proper permissions
+RUN chmod 755 /bin/nr-ingest
+
+# Switch to non-root user
+USER ingest
+
+# Expose ingest and metrics ports
+EXPOSE 4317 8889
+
+# Default environment variables
+ENV PORT=4317
+ENV METRICS_PORT=8889
+
+# Command to run
+ENTRYPOINT ["/bin/nr-ingest"]

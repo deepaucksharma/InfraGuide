@@ -1,0 +1,38 @@
+otlp:
+  endpoint: "http://collector:4318"
+  headers:
+    service-name: "nr-ebpf-agent"
+  flush_interval: 2s
+
+capture:
+  process_exec: true
+  network_flows: true
+  disk_io: true
+  tcp_connections: true
+
+ebpf:
+  ring_buffer_size: 8MiB
+  perf_buffer_size: 8MiB
+  maps_pinning: true
+  btf_path: /sys/kernel/btf/vmlinux
+
+fallback:
+  enable_procfs: true
+  procfs_interval: 5s
+  netstat_interval: 5s
+
+metrics:
+  include:
+    - system.process.cpu
+    - system.process.memory
+    - system.process.disk_io
+    - system.network.io
+    - system.network.connections
+    - system.network.packets
+  exclude: []
+
+attributes:
+  resource:
+    service.name: "nr-ebpf-agent"
+    service.version: "9.0.2"
+    service.instance.id: "${HOSTNAME}"

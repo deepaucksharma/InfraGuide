@@ -1,0 +1,55 @@
+FROM golang:1.21-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Install build dependencies
+RUN apk add --no-cache git gcc musl-dev
+
+# Copy go module files
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Copy source code
+COPY . .
+
+# Build the workload generator
+RUN go build -o /bin/workload-generator ./src/testing/workload_generator
+
+# Final stage
+FROM alpine:3.19
+
+# Install runtime dependencies
+RUN apk --no-cache add ca-certificates tzdata
+
+# Copy binary from builder stage
+COPY --from=builder /bin/workload-generator /bin/workload-generator
+
+# Create directory for profiles
+RUN mkdir -p /profiles
+
+# Copy profile configurations
+COPY src/testing/workload_generator/profiles /profiles
+
+# Create non-root user
+RUN addgroup -g 10003 generator && \
+    adduser -D -g '' -u 10003 -G generator generator
+
+# Set proper permissions
+RUN chmod 755 /bin/workload-generator && \
+    chmod -R 755 /profiles && \
+    chown -R generator:generator /profiles
+
+# Switch to non-root user
+USER generator
+
+# Default environment variables
+ENV TARGET_URL=http://collector:4318
+ENV PROFILE=default
+ENV WORKERS=10
+ENV RATE_LIMIT=1000
+ENV DURATION=300
+
+# Command to run
+ENTRYPOINT ["/bin/workload-generator"]
+CMD ["--profile", "${PROFILE}", "--target-url", "${TARGET_URL}"]

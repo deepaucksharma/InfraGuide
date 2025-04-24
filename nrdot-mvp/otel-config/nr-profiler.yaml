@@ -1,0 +1,68 @@
+otlp:
+  endpoint: "http://collector:4318"
+  headers:
+    service-name: "nr-profiler-agent"
+  flush_interval: 60s
+
+profiling:
+  # CPU profiling settings
+  cpu:
+    enabled: true
+    sampling_frequency: 99 # Hz (samples per second)
+    duration: 60s
+    include_process_names:
+      - java
+      - node
+      - python
+      - ruby
+      - php
+      - dotnet
+    exclude_process_names:
+      - otelcol
+
+  # Memory profiling settings
+  heap:
+    enabled: true
+    sampling_interval: 512KiB
+    duration: 60s
+    include_process_names:
+      - java
+      - node
+      - python
+
+  # Wall profiling (blocking calls)
+  wall:
+    enabled: true
+    sampling_interval: 10ms
+
+# Collection settings
+collection:
+  interval: 60s
+  retention: 1h
+
+# Technology-specific settings
+technologies:
+  jvm:
+    jmx_polling: true
+    thread_dump: true
+    heap_dump_trigger: 90%  # % heap usage to trigger heap dump
+  
+  nodejs:
+    v8_sampling: true
+    event_loop_monitoring: true
+  
+  python:
+    greenlet_support: true
+    asyncio_support: true
+
+# System settings
+system:
+  max_file_size: 100MiB
+  temp_dir: /tmp/profiler
+  log_level: info
+
+attributes:
+  resource:
+    service.name: "nr-profiler-agent"
+    service.version: "9.0.1"
+    service.instance.id: "${HOSTNAME}"

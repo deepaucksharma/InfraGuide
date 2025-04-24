@@ -1,0 +1,19 @@
+otlp:
+  endpoint: "http://collector:4318"
+  compression: "none"
+  batch_size: 100
+  flush_interval: 10s
+
+profiler:
+  collection_interval: 60s
+  cpu:
+    enabled: true
+    sampling_rate: 100
+  heap:
+    enabled: true
+    sampling_interval: 512KiB
+
+target:
+  process_filter:
+    include: [".*java.*", ".*python.*", ".*node.*", ".*ruby.*", ".*php.*", ".*dotnet.*"]
+    exclude: [".*test.*", ".*mock.*"]

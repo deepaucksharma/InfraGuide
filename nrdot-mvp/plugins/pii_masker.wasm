@@ -1,0 +1,4 @@
+#!/bin/sh
+# Placeholder file - this would be a real WebAssembly module in a real implementation
+echo "This is a placeholder for a WebAssembly module that would implement PII masking."
+echo "In a real implementation, this would be compiled Rust/C++ code."

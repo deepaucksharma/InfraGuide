@@ -1,0 +1,52 @@
+FROM golang:1.21-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Install build dependencies
+RUN apk add --no-cache git gcc musl-dev
+
+# Copy go module files
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Copy source code
+COPY . .
+
+# Build the mock upstream service
+RUN go build -o /bin/mock-upstream ./cmd/mock-upstream
+
+# Final stage
+FROM alpine:3.19
+
+# Install runtime dependencies
+RUN apk --no-cache add ca-certificates tzdata
+
+# Copy binary from builder stage
+COPY --from=builder /bin/mock-upstream /bin/mock-upstream
+
+# Create non-root user
+RUN addgroup -g 10002 service && \
+    adduser -D -g '' -u 10002 -G service service
+
+# Set proper permissions
+RUN chmod 755 /bin/mock-upstream
+
+# Switch to non-root user
+USER service
+
+# Expose service ports
+EXPOSE 8080 8081
+
+# Default environment variables
+ENV PORT=8080
+ENV METRICS_PORT=8081
+ENV LATENCY_MIN=10
+ENV LATENCY_MAX=50
+ENV ERROR_503_RATE=0
+ENV ERROR_429_RATE=0
+ENV CHAOS_MODE=false
+ENV CHAOS_DURATION=300
+
+# Command to run
+ENTRYPOINT ["/bin/mock-upstream"]

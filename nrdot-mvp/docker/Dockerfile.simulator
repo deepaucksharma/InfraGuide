@@ -1,0 +1,41 @@
+FROM golang:1.21-alpine AS builder
+
+# Set working directory
+WORKDIR /app
+
+# Install build dependencies
+RUN apk add --no-cache git gcc musl-dev
+
+# Copy go module files
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Copy source code
+COPY . .
+
+# Build the outage simulator
+RUN go build -o /bin/outage-simulator ./src/testing/outage_simulator
+
+# Final stage
+FROM alpine:3.19
+
+# Install runtime dependencies
+RUN apk --no-cache add ca-certificates tzdata curl iptables
+
+# Copy binary from builder stage
+COPY --from=builder /bin/outage-simulator /bin/outage-simulator
+
+# Set proper permissions
+RUN chmod 755 /bin/outage-simulator
+
+# Default environment variables
+ENV TARGET_SERVICE=mock-service
+ENV TARGET_URL=http://mock-service:8080/outage
+ENV OUTAGE_DURATION=300
+ENV OUTAGE_TYPE=api
+ENV WAIT_FOR_COMPLETION=true
+ENV VERIFY_DLQ=true
+ENV DLQ_DIRECTORY=/var/lib/otel/dlq
+
+# Command to run
+ENTRYPOINT ["/bin/outage-simulator"]

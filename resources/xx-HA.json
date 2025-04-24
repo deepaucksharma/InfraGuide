@@ -1,0 +1,656 @@
+{
+  "+/cwsayrqk": [
+    {
+      "type": 0,
+      "value": "[javascript]Actual Size"
+    }
+  ],
+  "+7sd9hoyZA": [
+    {
+      "type": 0,
+      "value": "[javascript]Copy"
+    }
+  ],
+  "/PgA81GVOD": [
+    {
+      "type": 0,
+      "value": "[javascript]Edit"
+    }
+  ],
+  "/bRGKhnXQ6": [
+    {
+      "type": 0,
+      "value": "[javascript]A new version is available. It will be downloaded and installed automatically."
+    }
+  ],
+  "0g8/VVdNuN": [
+    {
+      "type": 0,
+      "value": "[javascript]Go to claude.ai/settings to configure your profile, team, and more."
+    }
+  ],
+  "0tZLEYF8mJ": [
+    {
+      "type": 0,
+      "value": "[javascript]Developer"
+    }
+  ],
+  "1HUTYwndT2": [
+    {
+      "type": 0,
+      "value": "[javascript]Window"
+    }
+  ],
+  "1PfZLi/OV7": [
+    {
+      "type": 0,
+      "value": "[javascript]General"
+    }
+  ],
+  "1TJUzU26sO": [
+    {
+      "type": 0,
+      "value": "[javascript]Submit Feedback…"
+    }
+  ],
+  "25aCMlTDUq": [
+    {
+      "type": 0,
+      "value": "[javascript]Automatically start Claude when you log in"
+    }
+  ],
+  "3ML3xT+gEV": [
+    {
+      "type": 0,
+      "value": "[javascript]Redo"
+    }
+  ],
+  "3gG1j3kRBX": [
+    {
+      "type": 0,
+      "value": "[javascript]Submit Feedback..."
+    }
+  ],
+  "3unrKzH4zB": [
+    {
+      "type": 0,
+      "value": "[javascript]Copy"
+    }
+  ],
+  "4qP7MjrQfC": [
+    {
+      "type": 0,
+      "value": "[javascript]Environment variables"
+    }
+  ],
+  "5DUIVR3fVi": [
+    {
+      "type": 0,
+      "value": "[javascript]About..."
+    }
+  ],
+  "6yv8ytK4El": [
+    {
+      "type": 0,
+      "value": "[javascript]Check your network connection"
+    }
+  ],
+  "7fdcqxofEs": [
+    {
+      "type": 0,
+      "value": "[javascript]Exit"
+    }
+  ],
+  "7gSC+rZzXX": [
+    {
+      "type": 0,
+      "value": "[javascript]Quickly open Claude from anywhere"
+    }
+  ],
+  "8YQEOfuaGO": [
+    {
+      "type": 0,
+      "value": "[javascript]Select All"
+    }
+  ],
+  "9+afSO9e/t": [
+    {
+      "type": 0,
+      "value": "[javascript]Failed to check for updates: "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    }
+  ],
+  "9uNxNtcrFI": [
+    {
+      "type": 0,
+      "value": "[javascript]Install"
+    }
+  ],
+  "CZwl8X2D85": [
+    {
+      "type": 0,
+      "value": "[javascript]Advanced options"
+    }
+  ],
+  "CizRPROPWo": [
+    {
+      "type": 0,
+      "value": "[javascript]Claude Help"
+    }
+  ],
+  "D43DeqP+2t": [
+    {
+      "type": 0,
+      "value": "[javascript]Claude Settings"
+    }
+  ],
+  "D4DyT6MmPy": [
+    {
+      "type": 0,
+      "value": "[javascript]Could not load app settings"
+    }
+  ],
+  "DQTgg21B7g": [
+    {
+      "type": 0,
+      "value": "[javascript]Show App"
+    }
+  ],
+  "E9jYTa7AbX": [
+    {
+      "type": 0,
+      "value": "[javascript]System Tray"
+    }
+  ],
+  "EfdnINFnIz": [
+    {
+      "type": 0,
+      "value": "[javascript]File"
+    }
+  ],
+  "GSG5S0ysrR": [
+    {
+      "type": 0,
+      "value": "[javascript]Run on Startup"
+    }
+  ],
+  "HeHYq6bbS2": [
+    {
+      "type": 0,
+      "value": "[javascript]Claude can receive information like prompts and attachments from specialized servers using Model Context Protocol."
+    }
+  ],
+  "I5O68ogAtr": [
+    {
+      "type": 0,
+      "value": "[javascript]Get Started"
+    }
+  ],
+  "JVwNvMZjVT": [
+    {
+      "type": 0,
+      "value": "[javascript]Paste"
+    }
+  ],
+  "KAo3lt5Hv+": [
+    {
+      "type": 0,
+      "value": "[javascript]Paste"
+    }
+  ],
+  "Ko/2Ml7mZG": [
+    {
+      "type": 0,
+      "value": "[javascript]Reload This Page"
+    }
+  ],
+  "L32WRR6NOL": [
+    {
+      "type": 0,
+      "value": "[javascript]Delete"
+    }
+  ],
+  "L717supPIA": [
+    {
+      "type": 0,
+      "value": "[javascript]Settings"
+    }
+  ],
+  "LCWUQ/4Fu6": [
+    {
+      "type": 0,
+      "value": "[javascript]View"
+    }
+  ],
+  "NZIwKxgxJ+": [
+    {
+      "type": 0,
+      "value": "[javascript]Are you sure you want to remove the MCP server \""
+    },
+    {
+      "type": 1,
+      "value": "serverKey"
+    },
+    {
+      "type": 0,
+      "value": "\"?"
+    }
+  ],
+  "Nmvo1ufAY5": [
+    {
+      "type": 0,
+      "value": "[javascript]Couldn't connect to Claude"
+    }
+  ],
+  "O3rtEd7aMd": [
+    {
+      "type": 0,
+      "value": "[javascript]Find"
+    }
+  ],
+  "ODySlGptaj": [
+    {
+      "type": 0,
+      "value": "[javascript]Settings…"
+    }
+  ],
+  "PH29MShDiy": [
+    {
+      "type": 0,
+      "value": "[javascript]Forward"
+    }
+  ],
+  "PW5U8NgTto": [
+    {
+      "type": 0,
+      "value": "[javascript]Open MCP Log File..."
+    }
+  ],
+  "PZtcoAOSsa": [
+    {
+      "type": 0,
+      "value": "[javascript]Don't Enable"
+    }
+  ],
+  "PbJ4jR0kv1": [
+    {
+      "type": 0,
+      "value": "[javascript]You are running the latest version."
+    }
+  ],
+  "RTg057HE1D": [
+    {
+      "type": 0,
+      "value": "[javascript]Show Dev Tools"
+    }
+  ],
+  "S3MXlbjkax": [
+    {
+      "type": 0,
+      "value": "[javascript]What can I help you with today?"
+    }
+  ],
+  "S3k5yXss2r": [
+    {
+      "type": 0,
+      "value": "[javascript]Version "
+    },
+    {
+      "type": 1,
+      "value": "version"
+    }
+  ],
+  "TH+W2Ad73P": [
+    {
+      "type": 0,
+      "value": "[javascript]Cut"
+    }
+  ],
+  "UJCjEVPX6Q": [
+    {
+      "type": 0,
+      "value": "[javascript]Look Up"
+    }
+  ],
+  "Vvus2ifAny": [
+    {
+      "type": 0,
+      "value": "[javascript]Edit Config"
+    }
+  ],
+  "W1pELwt/+a": [
+    {
+      "type": 0,
+      "value": "[javascript]Claude runs in the Notification Area"
+    }
+  ],
+  "WBvq3HlPae": [
+    {
+      "type": 0,
+      "value": "[javascript]Set shortcut"
+    }
+  ],
+  "WF1HSu0jAC": [
+    {
+      "type": 0,
+      "value": "[javascript]Open Logs Folder"
+    }
+  ],
+  "WZe86KSdrM": [
+    {
+      "type": 0,
+      "value": "[javascript]Add to dictionary"
+    }
+  ],
+  "WlhIx7DfFO": [
+    {
+      "type": 0,
+      "value": "[javascript]OK"
+    }
+  ],
+  "XPIoFTkh3e": [
+    {
+      "type": 0,
+      "value": "[javascript]No Update Available"
+    }
+  ],
+  "XZ36+EBE5/": [
+    {
+      "type": 0,
+      "value": "[javascript]Zoom Out"
+    }
+  ],
+  "XinCguXCgN": [
+    {
+      "type": 0,
+      "value": "[javascript]Learn more"
+    }
+  ],
+  "YTdYCYAf/Z": [
+    {
+      "type": 0,
+      "value": "[javascript]Show Claude in the menu bar"
+    }
+  ],
+  "Z9g5m/V9Nq": [
+    {
+      "type": 0,
+      "value": "[javascript]Zoom In"
+    }
+  ],
+  "ZJZN1+KyJw": [
+    {
+      "type": 0,
+      "value": "[javascript]Settings..."
+    }
+  ],
+  "aNmxuDcWaU": [
+    {
+      "type": 0,
+      "value": "[javascript]Error"
+    }
+  ],
+  "aXdFLiVzjd": [
+    {
+      "type": 0,
+      "value": "[javascript]Show Main Window"
+    }
+  ],
+  "arbRxbtBkP": [
+    {
+      "type": 0,
+      "value": "[javascript]Back"
+    }
+  ],
+  "baGq3gy8z1": [
+    {
+      "type": 0,
+      "value": "[javascript]New Conversation"
+    }
+  ],
+  "dKX0bpR+a2": [
+    {
+      "type": 0,
+      "value": "[javascript]Quit"
+    }
+  ],
+  "dLyz0Srosd": [
+    {
+      "type": 0,
+      "value": "[javascript]Developer"
+    }
+  ],
+  "fEeEFfSz4K": [
+    {
+      "type": 0,
+      "value": "[javascript]Zoom In (indie cooler version)"
+    }
+  ],
+  "fFJxOwJRj2": [
+    {
+      "type": 0,
+      "value": "[javascript]Undo"
+    }
+  ],
+  "fWDSQQgRO5": [
+    {
+      "type": 0,
+      "value": "[javascript]Menu Bar"
+    }
+  ],
+  "iFRmqBsr1N": [
+    {
+      "type": 0,
+      "value": "[javascript]About Claude"
+    }
+  ],
+  "ilE9e0uxNN": [
+    {
+      "type": 0,
+      "value": "[javascript]Refresh"
+    }
+  ],
+  "j66cdL4EK5": [
+    {
+      "type": 0,
+      "value": "[javascript]Open Documentation"
+    }
+  ],
+  "jd5ZNrRMNP": [
+    {
+      "type": 0,
+      "value": "[javascript]You're an early explorer, so let us know your feedback."
+    }
+  ],
+  "k+06oXbIas": [
+    {
+      "type": 0,
+      "value": "[javascript]Show Claude in the notifications area"
+    }
+  ],
+  "kYwW0OsI4M": [
+    {
+      "type": 0,
+      "value": "[javascript]Claude Desktop is in beta."
+    }
+  ],
+  "m3GfpKD1WX": [
+    {
+      "type": 0,
+      "value": "[javascript]Reload"
+    }
+  ],
+  "mRXjxhS6p4": [
+    {
+      "type": 0,
+      "value": "[javascript]Check for Updates…"
+    }
+  ],
+  "ngLpGT7bUJ": [
+    {
+      "type": 0,
+      "value": "[javascript]Could not load developer settings"
+    }
+  ],
+  "oQuOiX24pp": [
+    {
+      "type": 0,
+      "value": "[javascript]Quit"
+    }
+  ],
+  "pWXxZASpOB": [
+    {
+      "type": 0,
+      "value": "[javascript]Help"
+    }
+  ],
+  "pgaCSv2/6H": [
+    {
+      "type": 0,
+      "value": "[javascript]Arguments"
+    }
+  ],
+  "q4hs14B00V": [
+    {
+      "type": 0,
+      "value": "[javascript]Unknown error"
+    }
+  ],
+  "rNAd+HxSK4": [
+    {
+      "type": 0,
+      "value": "[javascript]Open MCP Log File"
+    }
+  ],
+  "rY99UXvTDU": [
+    {
+      "type": 0,
+      "value": "[javascript]Copy Image"
+    }
+  ],
+  "rdiPpQVqvY": [
+    {
+      "type": 0,
+      "value": "[javascript]Developer mode allows access to developer tools and debugging features. Only enable this if you know what you're doing."
+    }
+  ],
+  "rwFEudHXey": [
+    {
+      "type": 0,
+      "value": "[javascript]There was an error reading or parsing claude_desktop_config.json: "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    }
+  ],
+  "sNnRQsIEYz": [
+    {
+      "type": 0,
+      "value": "[javascript]Find in page"
+    }
+  ],
+  "sZxWXq9BzJ": [
+    {
+      "type": 0,
+      "value": "[javascript]Give feedback"
+    }
+  ],
+  "sys7RHphmL": [
+    {
+      "type": 0,
+      "value": "[javascript]Feedback"
+    }
+  ],
+  "tWutslc/9Z": [
+    {
+      "type": 0,
+      "value": "[javascript]Enable"
+    }
+  ],
+  "u1/hT7oRQY": [
+    {
+      "type": 0,
+      "value": "[javascript]Quick Entry Keyboard Shortcut"
+    }
+  ],
+  "uc3dnSo+eo": [
+    {
+      "type": 0,
+      "value": "[javascript]File"
+    }
+  ],
+  "urCd4k/cE0": [
+    {
+      "type": 0,
+      "value": "[javascript]Command"
+    }
+  ],
+  "vgLHPxjh9O": [
+    {
+      "type": 0,
+      "value": "[javascript]Enable Developer Mode"
+    }
+  ],
+  "wS64bVG2CO": [
+    {
+      "type": 0,
+      "value": "[javascript]MCP is a protocol that enables secure connections between clients, such as the Claude Desktop app, and local services."
+    }
+  ],
+  "xJs1jZ8PoA": [
+    {
+      "type": 0,
+      "value": "[javascript]Claude runs in the background even when you close the window. Click the Claude icon in the tray to reopen the app, or right-click to quit."
+    }
+  ],
+  "xKRKzVVy9c": [
+    {
+      "type": 0,
+      "value": "[javascript]Configure"
+    }
+  ],
+  "xd436TVDRZ": [
+    {
+      "type": 0,
+      "value": "[javascript]There was an error reading or parsing developer_settings.json: "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    }
+  ],
+  "y9tCbmRzHN": [
+    {
+      "type": 0,
+      "value": "[javascript]Enable Developer Mode?"
+    }
+  ],
+  "ytjMRobdyL": [
+    {
+      "type": 0,
+      "value": "[javascript]Update Available"
+    }
+  ],
+  "zAYm/Z684h": [
+    {
+      "type": 0,
+      "value": "[javascript]Help"
+    }
+  ],
+  "zCIK9K8J4a": [
+    {
+      "type": 0,
+      "value": "[javascript]Error"
+    }
+  ],
+  "zSP70MVzIo": [
+    {
+      "type": 0,
+      "value": "[javascript]Clear shortcut"
+    }
+  ]
+}

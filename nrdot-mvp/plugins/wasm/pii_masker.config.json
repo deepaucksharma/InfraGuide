@@ -1,0 +1,40 @@
+{
+  "patterns": [
+    {
+      "type": "password",
+      "regex": "password=[^&]*",
+      "replacement": "password=********"
+    },
+    {
+      "type": "ssn",
+      "regex": "\\d{3}-\\d{2}-\\d{4}",
+      "replacement": "XXX-XX-XXXX"
+    },
+    {
+      "type": "credit_card",
+      "regex": "\\d{4}[- ]?\\d{4}[- ]?\\d{4}[- ]?\\d{4}",
+      "replacement": "XXXX-XXXX-XXXX-XXXX"
+    },
+    {
+      "type": "email",
+      "regex": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}",
+      "replacement": "email@redacted.com"
+    },
+    {
+      "type": "phone",
+      "regex": "\\+?\\d{1,3}[- ]?\\(?\\d{3}\\)?[- ]?\\d{3}[- ]?\\d{4}",
+      "replacement": "+X-XXX-XXX-XXXX"
+    }
+  ],
+  "attributes_to_check": [
+    "http.url",
+    "http.request.body",
+    "request.body",
+    "db.statement",
+    "message",
+    "exception.message",
+    "log.message"
+  ],
+  "log_matches": true,
+  "drop_critical": false
+}
